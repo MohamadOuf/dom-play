@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    background: 
+    linear-gradient(45deg, rgb(76,0,255), transparent);
+  
+    }
+
+  p {
+    font-family: georgia;
+    font-size: 20px;
+    }
+
+
+h1 {
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    }
+
+h2 {
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid rgb(45, 169, 218);
+    padding: 50px;
+    margin: 20px; 
+}
+
+h3 { 
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid rgb(36, 54, 61);
+    padding: 50px;
+    margin: 20px; 
+}

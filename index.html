@@ -1,1 +1,146 @@
-DOM Play assignement goes here
+<!DOCTYPE html>
+
+<html>
+
+<title>DOM Play</title>
+<link href = "style.css" rel = "stylesheet" type="text/css">
+<style>
+
+#clickSpans span{
+
+background-color:rgb(174, 183, 219);
+
+}
+
+</style>
+
+<head>
+
+<body>
+
+<div id="clickSpans">
+
+<h1>DOM Play Assignment By Mohamad Ouf </h1>
+
+<p><span data-actor="hamlet">Hamlet: To be or not to be</span></p>
+
+<p><span data-actor="skull">Skull: Don't ask me I'm only a skull</span></p>
+
+<p><span data-actor="hamlet">Hamlet: What did you say?</span></p>
+
+<p><span data-actor="skull">Skull: Nothing. I'm only a figment of your imagination.</span></p>
+
+<p><span data-actor="hamlet">Hamlet: Oh good. I thought I was going crazy!</span></p>
+
+
+
+
+
+
+
+
+<h2>Script of Act I Henry IV, Part 1
+    The play by William Shakespeare </h2>
+
+<p><span data-actor="KING HENRY IV ">KING HENRY IV : It seems then that the tidings of this broil
+    Brake off our business for the Holy Land.</span></p>
+
+<p><span data-actor="WESTMORELAND 
+    ">WESTMORELAND:his match'd with other did, my gracious lord;
+    For more uneven and unwelcome news
+    Came from the north</span></p>
+
+<p><span data-actor="KING HENRY IV ">KING HENRY IV : Here is a dear, a true industrious friend,
+    Sir Walter Blunt, new lighted from his horse.
+    Stain'd with the variation of each soil
+    Betwixt that Holmedon </span></p>
+
+<p><span data-actor="WESTMORELAND ">WESTMORELAND:In faith,
+    It is a conquest for a prince to boast of.</span></p>
+
+<p><span data-actor="KING HENRY IV ">KING HENRY IV: Yea, there thou makest me sad and makest me sin
+    In envy that my Lord Northumberland
+    Should be the father to so blest a son,</span></p>
+
+<h3> SPOILS OF WAR by "John Ridley"</h3>
+
+<p><span data-actor="JAEGER">JAEGER: At-at-at-at-at.  At-at-at-at-at.</span></p>
+
+<p><span data-actor="EPPS"> EPPS: What are you doing?</span></p>
+
+<p><span data-actor="JAEGER "> JAEGER : What does it look like I'm doing?  I'm 
+    killing Iraqis.  At-at-at-at-at.  At-at- 
+    at-at-- 
+</span></p>
+
+<p><span data-actor=" WES "> WES : Could you stop, please. You're giving me
+    a headache.</span></p>
+
+<p><span data-actor="JAEGER">JAEGER: A headache? !</span></p>
+
+
+<p><span data-actor="WES ">WES : Yeah, a headache.  My head hurts.  You're
+                making me uncomfortable. !</span></p>
+
+</div>
+<script>
+
+//spans is var so data is global
+
+var myImage = new Image(700, 450);
+myImage.src = 'image1.jpg';
+document.body.appendChild(myImage);
+
+var spans = document.querySelectorAll("#clickSpans span");
+
+//console.log(spans);
+
+for(const mySpan of spans){
+
+mySpan.addEventListener("click",function(event){
+
+//alert(mySpan.dataset.actor);
+
+//let myActor = mySpan.dataset.actor;
+
+hightlightActor(mySpan.dataset.actor);
+
+});
+
+}
+
+function hightlightActor(myActor){
+
+//alert("hello from highlightActor: " + myActor);
+
+for(const mySpan of spans){
+
+if (mySpan.dataset.actor == myActor){//current actor, hightlight
+
+mySpan.style.backgroundColor = 'gray';
+
+mySpan.style.fontWeight='bold';
+
+} else {//not current actor? change to white
+
+mySpan.style.backgroundColor = '#ff66d9';
+
+mySpan.style.fontWeight='normal';
+
+}
+
+}
+
+}
+
+//alert("hello");
+
+//document.getElementById("target").style.backgroundColor = "yellow";
+
+</script>
+
+</body>
+
+</head>
+
+</html>
